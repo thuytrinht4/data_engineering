@@ -1,9 +1,9 @@
 # Summary of the data types in this project
 # Table of Contents
 1. [CSV files](#CSV-files)
-2. [JSON](##JSON)
-3. [XML](##XML)
-4. [SQL databases](#SQL-database)
+2. [JSON](#JSON)
+3. [XML](#XML)
+4. [SQL databases](#SQL-databases)
 5. [Text Files](#Text-Files)
 6. [Extracting Data from the Web](#Extracting-Data-from-the-Web)
 

@@ -1,5 +1,5 @@
 # Table of Contents
-- [Data Pipelines: ETL vs ELT](#Data-Pipelines:-ETL-vs-ELT)
+- [Data Pipelines: ETL vs ELT](#Data-Pipelines-:-ETL-vs-ELT)
   - [ETL](#ETL)
   - [ELT](#ELT)
 - [Project Outline](#Project-Outline)

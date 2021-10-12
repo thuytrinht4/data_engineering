@@ -1,3 +1,11 @@
+# Table of Contents
+- [Data Pipelines: ETL vs ELT](#Data-Pipelines:-ETL-vs-ELT)
+  - [ETL](#ETL)
+  - [ELT](#ELT)
+- [Project Outline](#Project-Outline)
+- [Project Structure](#Project-Structure)
+- [Dataset](#Dataset)
+
 # Data Pipelines: ETL vs ELT
 Data pipeline is a generic term for moving data from one place to another. For example, it could be moving data 
 from one server to another server.
@@ -33,7 +41,7 @@ However, ETL pipelines are still used even with these cloud tools. Oftentimes, i
 and store data in a more readable or intuitive format. This can help data analysts and scientists work more efficiently 
 as well as help an organization become more data driven.
 
-## Outline of the project
+# Project Outline
 1. Extract data from different sources such as:
    + csv files
    + json files
@@ -58,10 +66,10 @@ as well as help an organization become more data driven.
 4. ETL Pipeline
    + code an ETL pipeline
 
-## Project Structure
+# Project Structure
 This project contains many Jupyter notebook, containing several sub-tasks for each of the contents in the Outline.
 
-## Dataset
+# Dataset
 The data used in this project is from the [World Bank Data](https://www.worldbank.org/en/region/eap/publication/long-covid-east-asia-and-pacific-economic-update-october-2021?cid=eap_tt_asiapacific_en_extp&gclid=Cj0KCQjw5JSLBhCxARIsAHgO2Sfs5c1Dt4voOmnIo-E46U_y5qoFUjdd-9e8Ufu3h5ZHJ3GKv5x5_00aAhRsEALw_wcB). 
 The data comes from two sources:
 1. [World Bank Indicator Data](https://data.worldbank.org/indicator) - This data contains socio-economic indicators for 

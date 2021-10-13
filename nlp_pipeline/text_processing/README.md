@@ -28,3 +28,25 @@ Documentation for Python Libraries:
    + [Requests](https://docs.python-requests.org/en/master/user/quickstart/#make-a-request)
    + [Regular Expressions](https://docs.python.org/3/library/re.html)
    + [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
+
+### Normalization
+Human language, in this case, the English language, is very complex will all its variations and bells and whistles. 
+Normalization is process to reduce some of those complexities of human language by:
+   + Converting all text to lowercase
+   + Removing punctuation
+
+### Tokenization
+Token is a fancy term for a symbol. Usually one token holds some meaning and is not typically split up any further.
+In case of natural language processing for English, the tokens are usually individual words. So tokenisation is simply 
+splitting each sentence into a sequence of words.
+
+There are two main ways to tokenization:
+1. Use split() method include in Python built-in functionality
+2. Use libraries specially built for NLP task like NLTK (Natural language tookit)
+
+split() is simply split words base on space and punctuation while NLTK provides more advanced tokenizations 
+techniques (e.g Dr.Who will be splited as 2 tokens <Dr.> and <Who> instead of 3 separted tokens <Dr>, <.> and <Who>).
+
+NLTK also provide options to split text into others levels than words level, like sentence-based or regular expression 
+based. Check other features of NLTK in [here](https://www.nltk.org/)
+

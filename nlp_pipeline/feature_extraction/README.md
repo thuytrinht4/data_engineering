@@ -27,11 +27,12 @@ such as Word2Vec or Glove.
 ## Feature Extraction Techniques
    + [Bag of Words](#Bag-Of-Words)
    + [TF-IDF](#TF-IDF)
-   + [Word Embeddings]()
+   + [One-Hot Encoding](#One-Hot-Encoding)
+   + [Word Embeddings](#Word Embeddings)
    
 ### Bag-Of-Words
 
-![BOW](BOW.png)
+![BOW](BOW.PNG)
 
 The Bag-Of-Words (BOW) model treats each document as an un-ordered collection or bag of words. Here, a document is the
 unit of text that you want to analyze. For instance, if we want to compare essay submitted by students to check for 
@@ -105,4 +106,23 @@ We can apply these representations to document classification tasks like Spam De
 as features, along with the label spam, not spam to set up a supervised learning problem. 
 
 
+### One-Hot Encoding
+So far, we've looked at representations that tried to characterize an entire document or collection of words as one unit.
+As the result, the kinds of inferences we can make are also typically at a document level, mixture of topics in the 
+document, documents similarity, documents sentiment, etc. For a deeper analysis of text, we need to come up with a 
+numerical representation for each word. One-Hot Encoding is a useful approach to this. 
+
+One-Hot Encoding treats each word like a class, assign it a vector that has one in a single pre-determined position for 
+that word and zero everywhere else. 
+
+<img src='one_hot_encoding.PNG' alt="one_hot_encoding" width="0.5" height="0.5"/>
+
+![one_hot_encoding](one_hot_encoding.PNG)
+
+It is just like the BOW idea, only that we keep a single word in each bag and build a vector for it. 
+
+### Word Embeddings
+One-hot encoding usually works in some situations, but break down when we have a large vocabulary to deal with, because 
+the size of our ward representation grows with the number of words. What we need as a way to control the size of our 
+word representation by limiting it to a fixed-size vector. 
 

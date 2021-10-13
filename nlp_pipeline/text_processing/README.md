@@ -10,19 +10,20 @@ helps reduce the complexity of the procedures you want to apply later.
 ## What Text Processing steps?
 We'll prepare text data from different sources with the following text processing steps:
 
-1. [Cleaning to remove irrelevant items, such as HTML tags](#Cleaning)
-2. [Normalizing by converting to all lowercase and removing punctuation](#Normalization)
-3. [Splitting text into words or tokens](#Tokenization)
-4. [Removing words that are too common, also known as stop words](#Stop-words-removal)
-5. [Identifying different parts of speech and named entities](#Part-of-Speech-and-Name-Entity-Recognition)
-6. Converting words into their dictionary forms, using stemming and lemmatization
+1. [Cleaning](#Cleaning-to-remove-irrelevant-items)
+2. [Normalization](#Normalization)
+3. [Tokenization](#Tokenization)
+4. [Stop words removal](#Stop-words-removal)
+5. [Part-of-Speech tagging and Named Entity Recognition](#Part-of-Speech-and-Name-Entity-Recognition)
+6. [Stemming and Lemmatization](#Stemming and Lemmatization)
 
 After performing these steps, your text will capture the essence of what was being conveyed in a form that is easier 
 to work with.
 
-### Cleaning
-In this project we tackle an example of cleaning text data from a popular source - the web. We'll use helpful 
-tools for cleaning, including the requests library, regular expressions, and Beautiful Soup.
+### Cleaning to remove irrelevant items
+In this project we tackle an example of cleaning text data from a popular source - the web. The process will remove 
+irrelevant items such as HTML tags. We'll use helpful tools for cleaning including the requests library, regular 
+expressions, and Beautiful Soup.
 
 Documentation for Python Libraries:
    + [Requests](https://docs.python-requests.org/en/master/user/quickstart/#make-a-request)
@@ -73,5 +74,41 @@ POS tagging is very easy with NLTK library using the `pos_tag()` method.
 Recognition (NER) is often used to index and search for news articles. for example, on companies of interest.  
 
 NER can be done with NLTK using the `ne_chunk()` method
+
+### Stemming and Lemmatization
+**Stemming and Lemmatization** is the process to convert a word or token to its dictionary forms, in order to further 
+simplify text data. This helps reduce the complexity while maintaining the essence of meaning that is carried by words. 
+
+**Stemming** is a process of reducing a word to its stem or root form. For instance, <branching>, <branched> and <branches> 
+will be reduced to <branch>. Stemming is meant to be a fast and crude operation, carried out by applying very simple 
+search and replace style rules. For example, the suffixes "ing" and "ed" can be dropped off, "ies" can be replaced by 
+"y", etc. This may result in a stem word that is not complete, but that's okay, as long as all form of that word are 
+reduced to the same stem. Thus, capturing the common underlying idea.
+
+There are a few methods for stemming in NLTK, like `PorterStemmer()`, `SnowballStemmer()`, and other language-specific 
+stemmers.
+
+**Lemmatization** is another technique used to reduce words to a normalized form, but in this case, the transformation 
+actually uses a dictionary to map different variants of a word back to its root. With this approach, we are able to 
+reduce non-trival inflections such as `is`, `was` and `were` back to the root `be`. 
+
+The default lemmatizer in NLTK, the `WordNetLemmatizer()`, uses the Wordnet database to reduce words to the root form.
+A lemmatizer needs to know or make an assumption about the Part-of-speech for each word it's trying to transform. 
+Without other specification, `WordNetLemmatizer()` defaults to nouns. We can override the default by specifying the PoS 
+parameter. 
+
+**Stemming vs Lemmatization** they both try to normalize text into its simple form of word. However:
+   + Stemming sometimes result in stems that are not complete words in English. But Stemming does not need a dictionary, 
+hence, less memory and storage required to operate.
+   + Lemmatization used a dictionary to transform, so the final form is always a meaningful word. But we need to 
+create/download and load this dictionary to operate Lemmatization, which require more memory and storage.
+
+So, depending on the constraints we have, stemming maybe a less memory intensive option for us to consider. 
+
+
+
+
+
+
 
 

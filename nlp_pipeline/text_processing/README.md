@@ -103,7 +103,8 @@ hence, less memory and storage required to operate.
    + Lemmatization used a dictionary to transform, so the final form is always a meaningful word. But we need to 
 create/download and load this dictionary to operate Lemmatization, which require more memory and storage.
 
-So, depending on the constraints we have, stemming maybe a less memory intensive option for us to consider. 
+So, depending on the constraints we have, stemming maybe a less memory intensive option for us to consider. Under no 
+constraints, it is also common to do lemmatization first, then stemming.
 
 
 

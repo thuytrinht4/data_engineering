@@ -28,7 +28,7 @@ such as Word2Vec or Glove.
    + [Bag of Words](#Bag-Of-Words)
    + [TF-IDF](#TF-IDF)
    + [One-Hot Encoding](#One-Hot-Encoding)
-   + [Word Embeddings](#Word Embeddings)
+   + [Word Embeddings](#Word-Embeddings)
    
 ### Bag-Of-Words
 
@@ -113,9 +113,7 @@ document, documents similarity, documents sentiment, etc. For a deeper analysis 
 numerical representation for each word. One-Hot Encoding is a useful approach to this. 
 
 One-Hot Encoding treats each word like a class, assign it a vector that has one in a single pre-determined position for 
-that word and zero everywhere else. 
-
-<img src='one_hot_encoding.PNG' alt="one_hot_encoding" width="0.5" height="0.5"/>
+that word and zero everywhere else.
 
 ![one_hot_encoding](one_hot_encoding.PNG)
 
@@ -124,5 +122,13 @@ It is just like the BOW idea, only that we keep a single word in each bag and bu
 ### Word Embeddings
 One-hot encoding usually works in some situations, but break down when we have a large vocabulary to deal with, because 
 the size of our ward representation grows with the number of words. What we need as a way to control the size of our 
-word representation by limiting it to a fixed-size vector. 
+word representation by limiting it to a fixed-size vector. In other words, we want to find an embedding for each word in 
+some vector space and we wanted to exhibit some desired properties. 
+
+For example, if two words are similar in meaning, they should be close to each other compared to words that are not. 
+And if two pairs of words have a similar difference in their meanings, they should be approximately equally separated in the embedded space. We could use such a 
+representation for a variety of purposes like finding synonyms and analogies, identifying concepts around which words 
+are clustered, classifying words as positive, negative, neutral, etc. 
+
+By combining word vectors, we can come up with another way of representing document as well. 
 

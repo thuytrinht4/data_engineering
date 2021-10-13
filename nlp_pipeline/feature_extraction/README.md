@@ -30,6 +30,7 @@ such as Word2Vec or Glove.
    + [Word Embeddings]()
    
 ### Bag-Of-Words
+
 ![BOW](BOW.png)
 
 The Bag-Of-Words (BOW) model treats each document as an un-ordered collection or bag of words. Here, a document is the
@@ -73,5 +74,35 @@ and -1 for most dissimilar.
 
 
 ### TF-IDF
+One limitation of BOW approach is that it treats every word as being equally important. Whereas intuitively, we know
+that some words occurs frequently within a corpus. For example, when looking at financial documents, costs or price 
+maybe a pretty common term. We can compensate for this by counting the number of documents in which each word occurs.
+This is call `document frequency`, and then dividing the term frequencies by the document frequency of that term. 
+
+![document_frequency](document_frequency.PNG)
+
+This gives us a metric that is proportional to the frequency of occurrence of a term in a document, but inversely 
+proportional to the number of documents it appears in. It highlights the words that are more unique to a document,
+and thus better for characterizing it. 
+
+In mathematical form, TF-IDF is simply the product of two weights: a `term frequency` and an `inverse document frequency`.
+The most commonly used form of TF-IDF defines: 
++ **Term Frequency** as the raw count of a term T in a document D, divided by total of terms in D
++ **Inverse document frequency** as the logarithm of, the total number of documents in the collection D, divided by the 
+number of documents where T is present. 
+
+![tf_idf](tf_idf.PNG)
+
+Several variations exist, that try to normalize or smooth the resulting values or prevent edge cases such as divide 
+by zero errors. 
+
+Overall, TF-IDF is an innovative approach to assigning weights to words, that signify their relevance in documents. 
+
+### BOW + TF-IDF
+What can we accomplish with BOW and TF-IDF representation?
+
+We can apply these representations to document classification tasks like Spam Detection. Here we use TF-IDF vectors 
+as features, along with the label spam, not spam to set up a supervised learning problem. 
+
 
 

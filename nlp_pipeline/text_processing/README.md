@@ -37,16 +37,27 @@ Normalization is process to reduce some of those complexities of human language 
 
 ### Tokenization
 Token is a fancy term for a symbol. Usually one token holds some meaning and is not typically split up any further.
-In case of natural language processing for English, the tokens are usually individual words. So tokenisation is simply 
+In case of natural language processing for English, the tokens are usually individual words. So tokenization is simply 
 splitting each sentence into a sequence of words.
 
 There are two main ways to tokenization:
 1. Use split() method include in Python built-in functionality
-2. Use libraries specially built for NLP task like NLTK (Natural language tookit)
+2. Use libraries specially built for NLP task like NLTK (Natural language toolkit)
 
-split() is simply split words base on space and punctuation while NLTK provides more advanced tokenizations 
-techniques (e.g Dr.Who will be splited as 2 tokens <Dr.> and <Who> instead of 3 separted tokens <Dr>, <.> and <Who>).
+split() is simply split words base on space and punctuation while NLTK provides more advanced tokenization 
+techniques (e.g <Dr.Who> will be split as 2 tokens <Dr.> and <Who> instead of 3 separated tokens <Dr>, <.> and <Who>).
 
 NLTK also provide options to split text into others levels than words level, like sentence-based or regular expression 
 based. Check other features of NLTK in [here](https://www.nltk.org/)
+
+### Stop words removal
+Stop words are uninformative words like ***in, the, at*** that do not add a lot of meaning to a sentence. They are
+typically very commonly occurring words, and we may want to remove them to reduce the size of the vocabulary, and hence 
+the complexity of later procedures. 
+
+Stop words is based on a specific corpus or collection of text. Different corpora may have different stop words. Also, 
+a word may a stop word in one application, but a useful word in another. 
+
+To remove stop words, we can use: stopwords dictionary from language library like NLTK and Python list comprehension 
+with a filtering condition.
 

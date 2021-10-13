@@ -10,11 +10,11 @@ helps reduce the complexity of the procedures you want to apply later.
 ## What Text Processing steps?
 We'll prepare text data from different sources with the following text processing steps:
 
-1. Cleaning to remove irrelevant items, such as HTML tags
-2. Normalizing by converting to all lowercase and removing punctuation
-3. Splitting text into words or tokens
-4. Removing words that are too common, also known as stop words
-5. Identifying different parts of speech and named entities
+1. [Cleaning to remove irrelevant items, such as HTML tags](#Cleaning)
+2. [Normalizing by converting to all lowercase and removing punctuation](#Normalization)
+3. [Splitting text into words or tokens](#Tokenization)
+4. [Removing words that are too common, also known as stop words](#Stop-words-removal)
+5. [Identifying different parts of speech and named entities](#Part-of-Speech-and-Name-Entity-Recognition)
 6. Converting words into their dictionary forms, using stemming and lemmatization
 
 After performing these steps, your text will capture the essence of what was being conveyed in a form that is easier 
@@ -60,4 +60,18 @@ a word may a stop word in one application, but a useful word in another.
 
 To remove stop words, we can use: stopwords dictionary from language library like NLTK and Python list comprehension 
 with a filtering condition.
+
+### Part-of-Speech and Name Entity Recognition
+**Part-of-Speech** (POS) tagging is a process which refers to categorizing words in a text in correspondence with a 
+particular part of speech, based on both its definition and its context like Noun, Verb, Adverbs, etc. Identifying how 
+words are being used in a sentence can help us better understand what is being said. It can also point out relationships 
+between words and recognize cross references. 
+
+POS tagging is very easy with NLTK library using the `pos_tag()` method.
+
+**Named Entities** are typically noun phrases that refer to some specific object, person, or place. Name Entity 
+Recognition (NER) is often used to index and search for news articles. for example, on companies of interest.  
+
+NER can be done with NLTK using the `ne_chunk()` method
+
 
